@@ -26,6 +26,14 @@ html {
     gap: $gap;
 }
 
+@mixin anchor() {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+  
+    
+}
+
 section {
     max-width: 1800px;
 }
@@ -153,15 +161,15 @@ main {
                 }
             }
         }
-    } 
+    }
 
-    section.column{
+    section.column {
         flex-direction: column-reverse;
     }
 
 
     section.view4 {
-       @include flex-column(1.2rem);
+        @include flex-column(1.2rem);
         width: 100%;
         padding: 1rem;
 
@@ -184,11 +192,13 @@ main {
                 border-radius: 0.7rem;
                 padding: 0.5rem;
             }
-            .top{
+
+            .top {
                 display: flex;
                 gap: 1rem;
                 justify-content: flex-end;
             }
+
             .bottom {
                 display: flex;
                 justify-content: space-between;
@@ -196,38 +206,84 @@ main {
             }
         }
     }
-    section.view5{
+
+    section.view5 {
         width: 100%;
-         padding: 1rem;
+        padding: 1rem;
         @include flex-column(1rem);
-        .top{
+
+        .top {
             width: 100%;
-            img{
+
+            img {
                 width: 100%;
                 border-radius: 0.7rem;
             }
         }
 
-        .bottom{
+        .bottom {
             background-color: rgb(43, 38, 38);
             @include flex-column(7rem);
             border-radius: 10px;
             padding: 1rem;
-            .text{
-                p{
+
+            .text {
+                p {
                     opacity: 0.7;
                 }
-                h2{
+
+                h2 {
                     text-transform: uppercase;
                 }
             }
-            .icon{
-                a{
-                    text-decoration: none;
-                    color: white;
-                     text-transform: uppercase;
-                     margin-left: 0.5rem;
+
+            .icon {
+                a {
+                    @include anchor();
                 }
+            }
+
+        }
+
+    }
+
+    section.view6 {
+        width: 100%;
+        padding: 1rem;
+
+        .content {
+            background-color: rgba(250, 194, 12, 0.464);
+            @include flex-column(2rem);
+            border-radius: 0.7rem;
+            padding: 1rem;
+
+            p {
+                opacity: 0.8;
+
+            }
+
+            h2 {
+                text-transform: uppercase;
+                font-size: 2.2rem;
+                font-weight: 500;
+            }
+
+            .icon {
+                background-color: black;
+                height: 38px;
+                padding: 1rem;
+                border-radius: 0.7rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+               
+
+                a {
+                    @include anchor();
+                    
+                }
+              
             }
 
         }
@@ -294,26 +350,57 @@ main {
 
         }
 
-        section.view4{
+        section.view4 {
             flex-direction: row;
             padding: 1rem 4rem;
         }
-        section.view5{
+
+        section.view5 {
             flex-direction: row;
             padding: 1rem 4rem;
-            .top, .bottom{
+
+            .top,
+            .bottom {
                 width: 50%
-            };
-            .bottom{
-                  justify-content: space-between;
-                  padding: 3rem;
-                  h2{
+            }
+
+            ;
+
+            .bottom {
+                justify-content: space-between;
+                padding: 3rem;
+
+                h2 {
                     font-size: 3rem;
                     font-weight: 300;
-                  }
+                }
 
             }
-            
+
+        }
+
+        section.view6 {
+             padding: 1rem 4rem;
+            .content {
+                flex-direction: row;
+                justify-content: space-between;
+                 padding: 5rem;
+
+                 h2{
+                    font-size: 3.5rem;
+                    font-weight: 300;
+                 }
+                 .icon{
+                      background-color: rgb(24, 22, 22);
+                      padding: 1.5rem 2.2rem;
+                      position: relative;
+                      top: 8rem;
+
+                 }
+                 .icon i{
+                    margin-left: 0.7rem;
+                 }
+            }
         }
     }
 

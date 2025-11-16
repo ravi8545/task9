@@ -213,7 +213,40 @@ main section.view5 .bottom .icon a {
   text-decoration: none;
   color: white;
   text-transform: uppercase;
-  margin-left: 0.5rem;
+}
+main section.view6 {
+  width: 100%;
+  padding: 1rem;
+}
+main section.view6 .content {
+  background-color: rgba(250, 194, 12, 0.464);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  border-radius: 0.7rem;
+  padding: 1rem;
+}
+main section.view6 .content p {
+  opacity: 0.8;
+}
+main section.view6 .content h2 {
+  text-transform: uppercase;
+  font-size: 2.2rem;
+  font-weight: 500;
+}
+main section.view6 .content .icon {
+  background-color: black;
+  height: 38px;
+  padding: 1rem;
+  border-radius: 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main section.view6 .content .icon a {
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
 }
 
 @media (min-width: 900px) {
@@ -267,7 +300,8 @@ main section.view5 .bottom .icon a {
     flex-direction: row;
     padding: 1rem 4rem;
   }
-  main section.view5 .top, main section.view5 .bottom {
+  main section.view5 .top,
+  main section.view5 .bottom {
     width: 50%;
   }
   main section.view5 .bottom {
@@ -277,5 +311,26 @@ main section.view5 .bottom .icon a {
   main section.view5 .bottom h2 {
     font-size: 3rem;
     font-weight: 300;
+  }
+  main section.view6 {
+    padding: 1rem 4rem;
+  }
+  main section.view6 .content {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 5rem;
+  }
+  main section.view6 .content h2 {
+    font-size: 3.5rem;
+    font-weight: 300;
+  }
+  main section.view6 .content .icon {
+    background-color: rgb(24, 22, 22);
+    padding: 1.5rem 2.2rem;
+    position: relative;
+    top: 8rem;
+  }
+  main section.view6 .content .icon i {
+    margin-left: 0.7rem;
   }
 }/*# sourceMappingURL=style.css.map */
