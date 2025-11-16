@@ -30,8 +30,8 @@ html {
     text-decoration: none;
     color: white;
     text-transform: uppercase;
-  
-    
+
+
 }
 
 section {
@@ -277,18 +277,109 @@ main {
                 align-items: center;
                 justify-content: center;
 
-               
+
 
                 a {
                     @include anchor();
-                    
+
                 }
-              
+
             }
 
         }
 
     }
+
+    section.view7 {
+        width: 100%;
+        padding: 1rem;
+
+        .content {
+            width: 100%;
+            background-color: rgba(66, 65, 65, 0.53);
+            padding: 1rem;
+            border-radius: 0.7rem;
+            @include flex-column(3rem);
+
+            .icons {
+                display: flex;
+                gap: 2rem;
+                align-items: center;
+                justify-content: flex-start;
+
+
+            }
+
+            i,
+            p {
+                width: fit-content;
+                background-color: rgba(66, 65, 65, 0.53);
+                border-radius: 50%;
+                padding: 1rem;
+                backdrop-filter: blur(5px);
+            }
+
+            i {
+                font-size: 1.2rem;
+            }
+        }
+    }
+
+    section.view8 {
+        width: 100%;
+        padding: 1rem;
+
+        .abouts {
+            background-color: rgba(66, 65, 65, 0.53);
+            border-radius: 0.7rem;
+            padding: 2rem;
+            @include flex-column(2rem);
+        }
+
+        .about {
+            @include flex-column(1rem);
+
+
+            .about-text {
+                @include flex-column(1rem);
+            }
+
+            a {
+                @include anchor();
+            }
+
+            button {
+                padding: 1rem 2rem;
+                background-color: rgba(242, 242, 32, 0.903);
+                border-radius: 0.7rem;
+            }
+        }
+
+    }
+
+    Section.view9 {
+        width: 100%;
+        padding: 1rem;
+
+        .footer-text {
+            @include flex-column(2rem);
+            background-color: rgba(66, 65, 65, 0.53);
+            padding: 1rem;
+            border-radius: 0.7rem;
+
+            p {
+                opacity: 0.7;
+            }
+
+            .f-top {
+                align-self: center;
+                justify-self: center;
+            }
+        }
+
+    }
+ 
+
 }
 
 
@@ -380,29 +471,95 @@ main {
         }
 
         section.view6 {
-             padding: 1rem 4rem;
+            padding: 1rem 4rem;
+
             .content {
                 flex-direction: row;
                 justify-content: space-between;
-                 padding: 5rem;
+                padding: 5rem;
 
-                 h2{
+                h2 {
                     font-size: 3.5rem;
                     font-weight: 300;
-                 }
-                 .icon{
-                      background-color: rgb(24, 22, 22);
-                      padding: 1.5rem 2.2rem;
-                      position: relative;
-                      top: 8rem;
+                }
 
-                 }
-                 .icon i{
+                .icon {
+                    background-color: rgb(24, 22, 22);
+                    padding: 1.5rem 2.2rem;
+                    position: relative;
+                    top: 8rem;
+
+                }
+
+                .icon i {
                     margin-left: 0.7rem;
-                 }
+                }
             }
+        }
+
+        section.view7 {
+            padding: 1rem 4rem;
+        }
+
+        section.view8 {
+            padding: 1rem 4rem;
+            padding-left: 0rem;
+
+        }
+
+        section.view9 {
+            padding: 1rem 4rem;
+
+        }
+
+
+
+
+    }
+}
+
+@media (min-width: 600px) {
+
+    section.wrapper {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 2fr 3fr;
+        grid-template-rows: auto auto;
+
+        section.view8 {
+            .abouts {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                gap: 5rem;
+            }
+        }
+
+    }
+
+    .view7 {
+
+        .content {
+            height: 100%;
+            padding: 2rem;
+            @include flex-column(0rem);
+            justify-content: space-between;
         }
     }
 
 
+
+    .view9 {
+        grid-column: 1 / 3;
+        grid-row: 2/ 3;
+
+        .footer-text {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 2rem;
+            background-color: rgba(66, 65, 65, 0.53);
+            border-radius: 0.7rem;
+        }
+    }
 }
