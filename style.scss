@@ -117,6 +117,8 @@ main {
         padding: 1rem;
         @include flex-column(1rem);
 
+
+
         .top {
             width: 100%;
 
@@ -151,7 +153,12 @@ main {
                 }
             }
         }
+    } 
+
+    section.column{
+        flex-direction: column-reverse;
     }
+
 
     section.view4 {
        @include flex-column(1.2rem);
@@ -188,6 +195,43 @@ main {
                 padding: 2rem 1rem;
             }
         }
+    }
+    section.view5{
+        width: 100%;
+         padding: 1rem;
+        @include flex-column(1rem);
+        .top{
+            width: 100%;
+            img{
+                width: 100%;
+                border-radius: 0.7rem;
+            }
+        }
+
+        .bottom{
+            background-color: rgb(43, 38, 38);
+            @include flex-column(7rem);
+            border-radius: 10px;
+            padding: 1rem;
+            .text{
+                p{
+                    opacity: 0.7;
+                }
+                h2{
+                    text-transform: uppercase;
+                }
+            }
+            .icon{
+                a{
+                    text-decoration: none;
+                    color: white;
+                     text-transform: uppercase;
+                     margin-left: 0.5rem;
+                }
+            }
+
+        }
+
     }
 }
 
@@ -253,6 +297,23 @@ main {
         section.view4{
             flex-direction: row;
             padding: 1rem 4rem;
+        }
+        section.view5{
+            flex-direction: row;
+            padding: 1rem 4rem;
+            .top, .bottom{
+                width: 50%
+            };
+            .bottom{
+                  justify-content: space-between;
+                  padding: 3rem;
+                  h2{
+                    font-size: 3rem;
+                    font-weight: 300;
+                  }
+
+            }
+            
         }
     }
 
