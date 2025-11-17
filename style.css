@@ -331,6 +331,14 @@ main Section.view9 .footer-text .f-top {
   align-self: center;
   justify-self: center;
 }
+main section.wrapper {
+  background-color: rgba(66, 65, 65, 0.53);
+  border-radius: 0.7rem;
+  padding: 5.5rem;
+}
+main section.view {
+  padding: 1rem;
+}
 
 @media (min-width: 900px) {
   main section.view1 {
@@ -433,6 +441,7 @@ main Section.view9 .footer-text .f-top {
     display: grid;
     grid-template-columns: 2fr 3fr;
     grid-template-rows: auto auto;
+    padding: 1rem 4rem;
   }
   section.wrapper section.view8 .abouts {
     display: flex;
@@ -459,5 +468,8 @@ main Section.view9 .footer-text .f-top {
     padding: 1.5rem 2rem;
     background-color: rgba(66, 65, 65, 0.53);
     border-radius: 0.7rem;
+  }
+  .view9 section.view {
+    padding: 1rem;
   }
 }/*# sourceMappingURL=style.css.map */

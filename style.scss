@@ -378,7 +378,17 @@ main {
         }
 
     }
- 
+
+    section.wrapper {
+        background-color: rgba(66, 65, 65, 0.53);
+        border-radius: 0.7rem;
+        padding: 5.5rem;
+
+    }
+
+    section.view {
+        padding: 1rem;
+    }
 
 }
 
@@ -525,6 +535,7 @@ main {
         display: grid;
         grid-template-columns: 2fr 3fr;
         grid-template-rows: auto auto;
+        padding: 1rem 4rem;
 
         section.view8 {
             .abouts {
@@ -560,6 +571,10 @@ main {
             padding: 1.5rem 2rem;
             background-color: rgba(66, 65, 65, 0.53);
             border-radius: 0.7rem;
+        }
+
+        section.view {
+            padding: 1rem;
         }
     }
 }
